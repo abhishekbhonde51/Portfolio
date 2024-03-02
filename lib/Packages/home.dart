@@ -249,15 +249,6 @@ class CategoryTitle extends StatelessWidget {
                 Container(
                   width: 150,
                   height: 150,
-                  child: Center(
-                    child: Text(
-                      'Git 2024',
-                      style: TextStyle(
-                          fontSize: 30,
-                          color: const Color.fromARGB(255, 5, 5, 5),
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
                       begin: Alignment.topLeft,
@@ -269,6 +260,15 @@ class CategoryTitle extends StatelessWidget {
                     ), // Optional: Background color for container
                     borderRadius: BorderRadius.circular(
                         10), // Optional: Border radius for container
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'Git 2024',
+                      style: TextStyle(
+                          fontSize: 30,
+                          color: const Color.fromARGB(255, 5, 5, 5),
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -295,7 +295,7 @@ class CategoryTitle extends StatelessWidget {
                       'Devops ',
                       style: TextStyle(
                           fontSize: 30,
-                          color: const Color.fromARGB(255, 5, 5, 5),
+                          color: Color.fromARGB(255, 5, 5, 5),
                           fontWeight: FontWeight.bold),
                     ),
                   ),
@@ -309,7 +309,7 @@ class CategoryTitle extends StatelessWidget {
                   },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(
-                        Color.fromARGB(255, 201, 10, 169)),
+                        const Color.fromARGB(255, 201, 10, 169)),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),
@@ -317,13 +317,13 @@ class CategoryTitle extends StatelessWidget {
                     ),
                     elevation: MaterialStateProperty.all<double>(5.0),
                     textStyle: MaterialStateProperty.all<TextStyle>(
-                      TextStyle(fontSize: 20),
+                      const TextStyle(fontSize: 20),
                     ),
                     padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                      EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Resume',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -331,6 +331,28 @@ class CategoryTitle extends StatelessWidget {
                         color: Colors.white),
                   ),
                 ),
+                const SizedBox(
+                  height: 50,
+                ),
+                Column(
+                  children: [
+                    Container(
+                      height: 500,
+                      width: 300,
+                      color: Colors.blueAccent,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 50,
+                            width: 200,
+                            color: Colors.red,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                )
               ]),
             ),
           ),
